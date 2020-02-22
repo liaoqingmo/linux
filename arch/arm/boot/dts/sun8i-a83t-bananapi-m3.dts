@@ -59,6 +59,34 @@
 	chosen {
 		stdout-path = "serial0:115200n8";
 	};
+<<<<<<< Updated upstream:arch/arm/boot/dts/sun8i-a83t-bananapi-m3.dts
+=======
+#if 0
+	leds {
+		/* The LEDs use PG0~2 pins, which conflict with MMC1 */
+		status = "disbaled";
+		
+		compatible = "gpio-leds";
+
+		blue_led {
+			label = "licheepi:blue:usr";
+			gpios = <&pio 6 1 GPIO_ACTIVE_LOW>; /* PG1 */
+		};
+
+		green_led {
+			label = "licheepi:green:usr";
+			gpios = <&pio 6 0 GPIO_ACTIVE_LOW>; /* PG0 */
+			default-state = "on";
+		};
+
+		red_led {
+			label = "licheepi:red:usr";
+			gpios = <&pio 6 2 GPIO_ACTIVE_LOW>; /* PG2 */
+		};
+	};
+#endif
+
+>>>>>>> Stashed changes:arch/arm/boot/dts/sun8i-v3s-licheepi-zero-audio.dts
 };
 
 &ehci0 {

@@ -45,3 +45,4 @@
 		remote-endpoint = <&panel_input>;
 	};
 };
+/delete-node/ &simplefb_lcd;
